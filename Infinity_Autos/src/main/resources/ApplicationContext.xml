@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="normalCarNormalTyres" class="com.example.Infinity_Autos.NormalCar">
+    
+    <constructor-arg ref="normalTyre"></constructor-arg>
+    </bean>
+        <bean id="normalCarSportsTyres" class="com.example.Infinity_Autos.NormalCar">
+    
+    <constructor-arg ref="sportsTyre"></constructor-arg>
+    </bean>
+
+	<bean id="sportsCarNormalTyres" class="com.example.Infinity_Autos.SportsCar">
+	<constructor-arg ref="normalTyre"></constructor-arg></bean>
+	
+	
+	<bean id="sportsCarSportsTyres" class="com.example.Infinity_Autos.SportsCar">
+	<constructor-arg ref="sportsTyre"></constructor-arg></bean>
+	
+	
+	<bean id="truck" class="com.example.Infinity_Autos.Truck">
+	<constructor-arg ref="truckTyre"></constructor-arg></bean>
+	<bean id="sportsTyre" class="com.example.Infinity_Autos.SportsTyres"></bean>
+	<bean id="normalTyre" class="com.example.Infinity_Autos.NormalTyres"></bean>
+	<bean id="truckTyre" class="com.example.Infinity_Autos.TruckTyres"></bean>
+</beans>
